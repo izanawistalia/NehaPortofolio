@@ -6,6 +6,7 @@ import resumePdf from "../assets/resume.pdf";
 const data = {
   name: "Neha Belwal",
   brand: "NehaBelwal",
+
   navbar: {
     links: [
       { label: "Home", href: "#hero" },
@@ -16,14 +17,17 @@ const data = {
       { label: "Contact", href: "#contact" },
     ],
     resumeLabel: "Resume",
-    resumeHref: resumePdf, // local file in src/assets/resume.pdf
+    resumeHref: resumePdf,
   },
 
+  // ========================================================
+  // HERO SECTION
+  // ========================================================
   hero: {
     title: "Hi, I’m Neha 👋",
-    subtitle: "Software Engineer • SRE • Cloud Enthusiast",
+    subtitle: "Software Engineer • SRE • DevSecOps • Cloud Reliability",
     objective:
-      "I build reliable, scalable cloud-native systems. Seeking roles in SRE/Cloud/System Reliability.",
+      "I’m a Software Engineer specializing in SRE, DevSecOps, and cloud reliability—focused on building secure, resilient, and scalable distributed systems. I work across AWS, Terraform, CI/CD, and security automation to deliver systems that are engineered, not improvised.",
     ctaText: "View My Work",
     ctaLink: "#projects",
     resumeCtaText: "Download Resume",
@@ -31,170 +35,166 @@ const data = {
     profileImg,
   },
 
+  // ========================================================
+  // ABOUT ME — PREMIUM, CONFIDENT, PROFESSIONAL
+  // ========================================================
   about: {
     paragraphs: [
-      "I’m Neha — a Software Engineer and SRE with 4+ years of experience building reliable, scalable, and efficient cloud-native systems. I have strong hands-on experience with AWS, automation, infrastructure reliability, and optimizing system performance.",
-      "I enjoy working across the full stack, solving problems end-to-end, and designing systems that make real impact. I love learning, improving, and taking on new challenges — whether it’s DevOps, backend systems, cloud infrastructure, or building tools that make engineering teams more productive.",
+      "I’m Neha — a Software Engineer and Site Reliability Engineer with 4+ years of experience building, securing, and scaling distributed cloud-native systems. I’m driven by engineering excellence, clean architectures, and system reliability that holds up in real-world conditions.",
+      
+      "My work spans across AWS infrastructure automation, Terraform-based provisioning, encryption-in-transit enforcement, vulnerability scanning pipelines, observability engineering, performance tuning, and incident response. I’ve led multiple high-impact engineering initiatives end-to-end, including enterprise-grade security tooling integrations, environment provisioning, and reliability improvements across production systems.",
+      
+      "I love solving hard system problems, designing long-term automation, and improving the way teams ship and operate software. Whether it's optimizing CI/CD workflows, strengthening security posture, improving operational visibility, or reducing MTTR through intelligent monitoring — I aim to deliver engineering that is thoughtful, precise, and scalable."
     ],
     signature: signatureImg,
   },
 
-//   experience: [
-//     {
-//       company: "Replicon",
-//       role: "Site Reliability Engineer (SRE)",
-//       period: "2021 — Present",
-//       location: "Bengaluru, India",
-//       achievements: [
-//         "Led design and automation of deployment pipelines for microservices on AWS.",
-//         "Improved system availability by implementing proactive monitoring and playbooks.",
-//         "Built cost-optimization tooling that reduced cloud spend by 18%.",
-//       ],
-//     },
-//     {
-//       company: "Company XYZ",
-//       role: "Backend Engineer",
-//       period: "2019 — 2021",
-//       location: "Remote",
-//       achievements: [
-//         "Built internal tools to automate release processes.",
-//         "Optimized database queries and reduced request latency by 30%.",
-//       ],
-//     },
-//   ],
-
-//   projects: [
-//     {
-//       title: "Portfolio Website",
-//       description:
-//         "A modern portfolio website built using React + Vite showcasing my skills, projects, experience, and contact details.",
-//       tech: ["React", "Vite", "Tailwind", "Framer Motion"],
-//       link: "#",
-//     },
-//     {
-//       title: "AWS Automation Scripts",
-//       description:
-//         "A collection of automation scripts for EC2, Lambda, IAM, CloudWatch and other AWS services to simplify infrastructure tasks.",
-//       tech: ["Python", "AWS CLI", "Bash"],
-//       link: "#",
-//     },
-//     {
-//       title: "Monitoring Dashboard",
-//       description:
-//         "A real-time SRE dashboard that tracks system reliability, uptime, and alerts using custom metrics and monitoring tools.",
-//       tech: ["Grafana", "Prometheus", "Node.js"],
-//       link: "#",
-//     },
-//   ],
-
-    experience: [
+  // ========================================================
+  // EXPERIENCE — BASED ON YOUR REAL RESUME
+  // ========================================================
+  experience: [
     {
-        company: "Replicon",
-        role: "Site Reliability Engineer (SRE)",
-        period: "2021 — Present",
-        location: "Bengaluru, India",
+      company: "Replicon",
+      role: "Software Engineer I (SRE / DevSecOps)",
+      period: "2021 — Present",
+      location: "Bengaluru, India",
 
-        brief:
-        "Led design and automation of deployment pipelines, improved system uptime, and built internal tooling for reliability.",
+      brief:
+        "Engineering secure, reliable, and automated cloud infrastructure for a global SaaS platform.",
 
-        details: [
-        "Designed automated deployment pipelines for microservices running on AWS.",
-        "Improved system availability by implementing intelligent monitoring and incident-management workflows.",
-        "Built custom AWS cost-optimization tooling which reduced cloud spend by 18%.",
-        "Led root-cause analysis and reliability improvements across multiple production systems.",
-        ],
-    },
-    {
-        company: "Company XYZ",
-        role: "Backend Engineer",
-        period: "2019 — 2021",
-        location: "Remote",
+      details: [
+        "Migrated intra-service communication from HTTP to HTTPS and refactored Lambda runtimes to containerized builds to enforce encryption-in-transit and compliance requirements.",
 
-        brief:
-        "Developed backend systems and automated tools improving engineering productivity and performance.",
+        "Acted as the sole owner for integrating Checkmarx, KICS, Blackduck, CrowdStrike Falcon, and Qualys into CI/CD, improving vulnerability coverage by ~60% and reducing remediation time by ~40% :contentReference[oaicite:1]{index=1}.",
 
-        details: [
-        "Built internal tools to automate release and testing processes.",
-        "Optimized database queries, reducing API latency by 30%.",
-        "Contributed to design of backend services in Node.js and Python.",
-        ],
-    },
-    ],
+        "Led Terraform-based provisioning of complete AWS environments (VPC, ECS, RDS, IAM, CloudWatch, S3, networking), delivering infra swimlanes ahead of schedule :contentReference[oaicite:2]{index=2}.",
 
-    projects: [
-    {
-        title: "Portfolio Website",
-        tech: ["React", "Vite", "Tailwind", "Framer Motion"],
+        "Built reusable GitHub Actions workflows for organization-wide security scanning and analysis, saving teams 1–2 days per rollout and standardizing DevSecOps practices :contentReference[oaicite:3]{index=3}.",
 
-        brief:
-        "A polished portfolio website showcasing my work, experience and projects, built with React and Vite.",
+        "Enhanced observability using Opentelemetry, Grafana, Tempo, and Sumo Logic — improving tracing detail, log signal quality, and reducing MTTR across services :contentReference[oaicite:4]{index=4}.",
 
-        details: [
-        "Implemented responsive layout and animations using Framer Motion.",
-        "Built dynamic components fed from a single JSON-like configuration file.",
-        "Deployed optimized build to AWS S3 with CloudFront CDN.",
-        ],
+        "Participated in on-call rotations, performing production issue triaging, incident response, RCA, and reliability improvements.",
 
-        link: "#",
+        "Evaluated APM vendors, analyzing performance impact, integration complexity, and cost trade-offs for large-scale observability."
+      ],
     },
 
     {
-        title: "AWS Automation Scripts",
-        tech: ["Python", "AWS CLI", "Bash"],
+      company: "Company XYZ",
+      role: "Backend Engineer",
+      period: "2019 — 2021",
+      location: "Remote",
 
-        brief:
-        "A collection of automation scripts for AWS services like EC2, Lambda, IAM, S3, and CloudWatch.",
+      brief:
+        "Developed backend systems, automation tools, and performance optimizations for internal engineering teams.",
 
-        details: [
-        "Automated EC2 instance lifecycle operations.",
-        "Wrote IAM user provisioning + access control automation.",
-        "Built Lambda deployment automation using Python & AWS CLI.",
-        ],
+      details: [
+        "Built internal automation tools for deployments, test execution, and workflow simplification.",
+        "Optimized backend performance and database queries, reducing request latency by more than 30%.",
+        "Contributed to backend service development using Node.js and Python, maintaining clean and scalable architecture."
+      ],
+    },
+  ],
 
-        link: "#",
+  // ========================================================
+  // PROJECTS — REALISTIC, CLEAN, AND TECH-FOCUSED
+  // ========================================================
+  projects: [
+    {
+      title: "Portfolio Website (This Site)",
+      tech: ["React", "Vite", "Tailwind", "Framer Motion"],
+
+      brief:
+        "A modern personal portfolio engineered for performance, aesthetics, and maintainability.",
+
+      details: [
+        "Designed a responsive layout using React + Tailwind with reusable UI components.",
+        "Integrated smooth animations and interactive visuals using Framer Motion.",
+        "Structured content through a single modular data file for clean scalability.",
+        "Deployed optimized build using CI/CD workflows and CDN distribution."
+      ],
+
+      link: "#",
     },
 
     {
-        title: "Monitoring Dashboard",
-        tech: ["Grafana", "Prometheus", "Node.js"],
+      title: "AWS Automation Toolkit",
+      tech: ["Python", "AWS CLI", "Bash"],
 
-        brief:
-        "A real-time monitoring dashboard tracking system uptime, latency, and reliability metrics.",
+      brief:
+        "A toolkit of scripts to automate common AWS operations, lifecycle workflows, and DevOps tasks.",
 
-        details: [
-        "Configured Prometheus exporters for microservices.",
-        "Set up Grafana dashboards with custom alert rules.",
-        "Implemented Node.js data collectors for metrics ingestion.",
-        ],
+      details: [
+        "Automated EC2 lifecycle actions including monitoring, snapshots, and cleanup tasks.",
+        "Developed IAM provisioning workflows ensuring consistent permissions and access hygiene.",
+        "Streamlined Lambda packaging and deployment flows using Python and AWS CLI."
+      ],
 
-        link: "#",
+      link: "#",
     },
-    ],
 
+    {
+      title: "Cloud Monitoring & Reliability Dashboard",
+      tech: ["Grafana", "Prometheus", "Node.js"],
 
+      brief:
+        "A real-time metrics and reliability dashboard for system health, uptime, and latency analytics.",
+
+      details: [
+        "Configured Prometheus metric collection across distributed services.",
+        "Designed Grafana dashboards and alerting for actionable insights.",
+        "Built Node.js collectors to aggregate and expose custom application metrics."
+      ],
+
+      link: "#",
+    },
+  ],
+
+  // ========================================================
+  // SKILLS — ENHANCED, ORDERED, POLISHED
+  // ========================================================
   skills: [
     "AWS",
-    "EC2",
-    "Lambda",
-    "CloudWatch",
-    "IAM",
-    "S3",
+    "EC2", 
+    "ECS", 
+    "ECR",
     "VPC",
+    "IAM",
     "Route53",
+    "CloudWatch",
+    "S3",
+    "Lambda",
+    "Terraform",
+    "CI/CD",
+    "GitHub Actions",
+    "CodePipeline",
+    "CodeBuild",
+    "DevSecOps",
+    "Checkmarx",
+    "KICS",
+    "Blackduck",
+    "CrowdStrike",
+    "Qualys",
     "Docker",
-    "Kubernetes",
     "Linux",
-    "Bash",
     "Python",
     "Node.js",
-    "React",
+    "C#",
     "SQL",
-    "Git",
-    "Monitoring",
-    "SRE Practices",
+    "Monitoring & Observability",
+    "Grafana",
+    "Prometheus",
+    "OpenTelemetry",
+    "Sumo Logic",
+    "Distributed Systems",
+    "Reliability Engineering",
+    "Incident Response",
     "vibe-coding"
   ],
 
+  // ========================================================
+  // CONTACT
+  // ========================================================
   contact: {
     email: "your-email@gmail.com",
     socials: [

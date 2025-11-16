@@ -58,51 +58,93 @@ export default function Hero() {
       >
         <div className="absolute inset-0" />
 
-        {innerRect && (
-          <div
-            className="absolute rounded-3xl p-12 shadow-2xl backdrop-blur-xl flex flex-col justify-center items-center text-center bg-white/80"
-            style={{
-              left: innerRect.x,
-              top: innerRect.y,
-              width: innerRect.width,
-              height: innerRect.height,
-              pointerEvents: "none",
-            }}
-          >
-            <div style={{ pointerEvents: "auto", maxWidth: "520px" }}>
-              <h1 className="text-5xl font-extrabold mb-4 text-gray-900">
-                {hero.title}
-              </h1>
+{innerRect && (
+  <div
+    className="absolute rounded-3xl shadow-2xl backdrop-blur-xl bg-white/80 flex flex-col"
+    style={{
+      left: innerRect.x,
+      top: innerRect.y,
+      width: innerRect.width * 1.1,   // ⭐ Wider card
+      height: innerRect.height * 1.1, // ⭐ Taller card
+      pointerEvents: "none",
+      padding: "32px",
+      boxSizing: "border-box",
+    }}
+  >
+    <div
+      className="flex flex-col mx-auto w-full"
+      style={{
+        maxWidth: "720px",             // ⭐ Wider content (looks premium)
+        pointerEvents: "auto",
+        height: "100%",
+        display: "flex",
+      }}
+    >
 
-              <h2 className="text-xl font-semibold text-gray-700 mb-4">
-                {hero.subtitle}
-              </h2>
+      {/* FIXED HEADER */}
+      <div style={{ flexShrink: 0, paddingBottom: "12px", textAlign: "center",  width: "100%",  margin: "0 auto" }}>
+        <h1 className="text-5xl font-extrabold mb-2 text-gray-900">
+          {hero.title}
+        </h1>
+        <h2 className="text-xl font-semibold text-gray-700 mb-4">
+          {hero.subtitle}
+        </h2>
+      </div>
 
-              <p className="text-gray-600 text-lg leading-relaxed mb-6">
-                {hero.objective}
-              </p>
+      {/* SCROLLABLE OBJECTIVE AREA */}
+      <div
+        className="hero-scroll"
+        style={{
+          flex: 1,
+          minHeight: 0,                // ⭐ Important for scroll
+          overflowY: "auto",
+          overflowX: "hidden",
+          paddingRight: "4px",
+        }}
+      >
+        <p className="text-gray-600 text-lg leading-relaxed">
+          {hero.objective}
+        </p>
+      </div>
 
-              <div style={{ display: "flex", gap: "12px", justifyContent: "center" }}>
-                <a
-                  href={hero.ctaLink}
-                  className="px-6 py-3 bg-black text-white rounded-lg shadow hover:bg-gray-800 transition"
-                  style={{ padding: "10px 14px", borderRadius: 10, background: "linear-gradient(90deg,var(--primary),var(--primary-2))", color: "#fff", border: "none", cursor: "pointer" }}
-                >
-                  {hero.ctaText}
-                </a>
+      {/* FIXED BUTTONS */}
+      <div
+        style={{
+          flexShrink: 0,
+          display: "flex",
+          gap: "12px",
+          justifyContent: "center",
+          paddingTop: "16px",
+        }}
+      >
+        <a
+          href={hero.ctaLink}
+          className="px-6 py-3 bg-black text-white rounded-lg shadow hover:bg-gray-800 transition"
+          style={{
+            padding: "10px 14px",
+            borderRadius: 10,
+            background: "linear-gradient(90deg,var(--primary),var(--primary-2))",
+            color: "#fff",
+            border: "none",
+            cursor: "pointer",
+          }}
+        >
+          {hero.ctaText}
+        </a>
 
-                <a
-                  href={hero.resumeHref}
-                  className="px-6 py-3 border rounded-lg shadow hover:bg-gray-50 transition"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  {hero.resumeCtaText}
-                </a>
-              </div>
-            </div>
-          </div>
-        )}
+        <a
+          href={hero.resumeHref}
+          className="px-6 py-3 border rounded-lg shadow hover:bg-gray-50 transition"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          {hero.resumeCtaText}
+        </a>
+      </div>
+    </div>
+  </div>
+)}
+
 
         {/* Glow behind avatar */}
         <div
