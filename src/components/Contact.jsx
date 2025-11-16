@@ -45,12 +45,13 @@ function Contact() {
               <a
                 key={s.name}
                 href={s.url}
-                style={{
-                  padding: "10px 14px",
-                  borderRadius: 10,
-                  border: "solid var(--glass-border)",
-                  textDecoration: "none",
-                }}
+                // style={{
+                //   padding: "10px 14px",
+                //   borderRadius: 10,
+                //   border: "solid var(--glass-border)",
+                //   textDecoration: "none",
+                // }}
+                style={{ padding: "10px 14px", borderRadius: 10, background: "linear-gradient(90deg,var(--primary),var(--primary-2))", color: "#fff", border: "none", cursor: "pointer" }}
               >
                 {s.name}
               </a>
