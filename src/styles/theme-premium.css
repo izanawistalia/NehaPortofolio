@@ -1,0 +1,225 @@
+/* src/styles/theme-premium.css */
+
+/* Palette & tokens */
+:root{
+  --primary: #A64CFF;
+  --primary-2: #7A26FF;
+  --primary-3: #CFA9FF;
+  --bg: linear-gradient(180deg,#fff,#fbf5ff);
+  --surface: rgba(255,255,255,0.76);
+  --glass-border: rgba(122,38,255,0.18);
+  --muted: #6b6b7a;
+  --text: #111216;
+  --card-shadow: 0 18px 60px rgba(80,30,140,0.10);
+  --card-radius: 18px;
+  --glass-radius: 20px;
+  --glass-blur: 12px;
+  --max-width: 1200px;
+  --accent-glow: rgba(166,76,255,0.12);
+}
+
+/* base */
+*{box-sizing:border-box}
+html,body,#root{height:100%}
+body{
+  margin:0;
+  font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+  background: var(--bg);
+  color: var(--text);
+  -webkit-font-smoothing:antialiased;
+  -moz-osx-font-smoothing:grayscale;
+  line-height:1.6;
+}
+
+/* container helpers */
+.app-container{max-width:var(--max-width);margin:0 auto;padding:0 20px}
+
+/* NAV */
+.navbar{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  padding:16px 20px;
+  position:sticky;
+  top:0;
+  z-index:90;
+  background: linear-gradient(180deg, rgba(255,255,255,0.55), rgba(255,255,255,0.45));
+  backdrop-filter: blur(8px);
+  border-bottom:1px solid var(--glass-border);
+}
+.nav-left{font-weight:700;font-size:20px;letter-spacing:0.2px}
+.nav-links{display:flex;gap:20px;align-items:center}
+.nav-link {color:var(--text); text-decoration:none; font-weight:600; padding:6px 8px; border-radius:8px}
+.nav-link:hover{color:var(--primary-2)}
+.resume-btn{
+  padding:8px 14px;border-radius:12px;border:none;background:linear-gradient(90deg,var(--primary),var(--primary-2));
+  color:white;cursor:pointer;box-shadow:0 18px 50px rgba(122,38,255,0.12);
+}
+
+/* HERO */
+.hero{padding:88px 0 96px 0; position:relative; overflow:hidden}
+.hero-card{
+  max-width:720px;margin:0 auto; padding:40px;border-radius:var(--glass-radius);
+  background:var(--surface); border:1px solid var(--glass-border); box-shadow:var(--card-shadow);
+  text-align:center; position:relative;
+}
+.hero-title{font-size:48px;margin:0 0 8px;font-weight:800}
+.hero-sub{margin:0 0 14px;color:var(--muted);font-weight:600}
+.hero-desc{color:var(--muted);line-height:1.6}
+
+/* avatar hologram (positioned absolutely in Hero component) */
+.avatar-holo { pointer-events:none; }
+
+/* Buttons */
+.btn-primary{
+  background:linear-gradient(90deg,var(--primary),var(--primary-2));
+  color:#fff;padding:12px 22px;border-radius:14px;border:none;cursor:pointer;
+  box-shadow:0 18px 60px rgba(122,38,255,0.12);
+}
+.btn-ghost{
+  padding:12px 20px;border-radius:14px;border:1px solid var(--glass-border);
+  background:transparent;color:var(--text);cursor:pointer;
+}
+
+/* Sections */
+.section{padding:84px 0}
+.section-heading{font-size:34px;font-weight:800;text-align:center;margin-bottom:12px}
+.section-subline{display:block;margin:10px auto 28px;width:94px;height:8px;border-radius:8px;background:linear-gradient(90deg,var(--primary),var(--primary-2))}
+
+/* Cards */
+.card{
+  background: linear-gradient(180deg, rgba(255,255,255,0.98), rgba(250,245,255,0.96));
+  border-radius:14px;padding:20px;border:1px solid var(--glass-border);box-shadow:0 12px 36px rgba(60,20,110,0.08);
+}
+.row-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:22px}
+
+/* Modal */
+.modal-backdrop{
+  position:fixed;inset:0;background:linear-gradient(180deg, rgba(6,4,10,0.36), rgba(6,4,10,0.46));
+  display:flex;align-items:center;justify-content:center;z-index:999;padding:28px;
+}
+.modal{
+  width:min(880px,96%);background:linear-gradient(180deg,rgba(255,255,255,0.98),#fff);border-radius:20px;padding:28px;
+  border:1px solid var(--glass-border);box-shadow:0 60px 160px rgba(90,30,160,0.18);max-height:86vh;overflow:auto;position:relative;
+}
+.modal-close{
+  position:absolute;right:18px;top:18px;background:linear-gradient(90deg,var(--primary),var(--primary-2));
+  color:white;border:none;border-radius:999px;width:40px;height:40px;display:flex;align-items:center;justify-content:center;cursor:pointer;
+}
+
+/* Skills */
+.skills-area{position:relative;height:90vh;overflow:hidden;background:transparent}
+.skills-heading{position:absolute;top:36px;left:50%;transform:translateX(-50%);z-index:30}
+.skill-bubble{
+  min-width:72px;min-height:72px;border-radius:50%;display:flex;align-items:center;justify-content:center;
+  background:radial-gradient(circle,#fff,#f6ecff);border:2px solid var(--glass-border);
+  box-shadow:0 18px 50px rgba(122,38,255,0.08);padding:12px 18px; font-weight:600;
+}
+
+/* small utility */
+.center{display:flex;align-items:center;justify-content:center}
+.hidden{display:none}
+
+/* transitions */
+.fade-in{animation:fadeIn 220ms ease-out}
+@keyframes fadeIn{from{opacity:0;transform:scale(0.98)}to{opacity:1;transform:scale(1)}}
+
+.section-subline {
+  width: 80px;
+  height: 6px;
+  background: linear-gradient(90deg,#a855f7,#7c3aed);
+  border-radius: 6px;
+  margin: 16px auto 0 auto;
+}
+
+#contact {
+  background: linear-gradient(to bottom, rgba(255,255,255,0.2), #f8f0ff 40%);
+}
+
+/* =====  Seamless site background layer (drop into end of theme-premium.css) ===== */
+
+/* 1) Make sure standard sections are transparent and have no borders/shadows */
+.section,
+section {
+  background: transparent !important;
+  border: none !important;
+  box-shadow: none !important;
+}
+
+/* Remove any per-section hard gradients that may exist in global.css */
+section#about,
+section#experience,
+section#projects,
+section#skills,
+section#contact {
+  background: transparent !important;
+  border: none !important;
+  box-shadow: none !important;
+}
+
+/* 2) Remove visible separators coming from .section-subline or other separators (if any) */
+.section-subline {
+  background: linear-gradient(90deg, var(--primary), var(--primary-2)) !important;
+  /* keep this small and decorative — not a full-width border */
+  width: 80px;
+  height: 6px;
+  margin: 12px auto 0;
+  box-shadow: none !important;
+}
+
+/* 3) Create a fixed background layer behind all content so scrolling is seamless */
+:root {
+  --site-gradient: linear-gradient(
+    180deg,
+    #ffffff 0%,
+    #faf5ff 18%,
+    #f6ecff 36%,
+    #f3eaff 62%,
+    #f1e4ff 86%,
+    #ffffff 100%
+  );
+}
+
+/* Wrap the whole site with .site-bg (see step 3 instructions below) */
+.site-bg {
+  position: relative;
+  min-height: 100vh;
+  z-index: 0;
+}
+
+/* Fixed background layer — covers entire viewport, sits behind everything */
+.site-bg::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+  background: var(--site-gradient);
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-size: cover;
+  will-change: transform;
+  pointer-events: none;
+}
+
+/* 4) Ensure sections do not show outlines or hairline borders */
+section,
+.section,
+.card,
+.card-hover {
+  border: none !important;
+  outline: none !important;
+  background-clip: padding-box;
+}
+
+/* 5) Keep skills area overflow hidden to avoid any visual seam from moving bubbles */
+#skills, section#skills {
+  overflow: hidden;
+  position: relative;
+}
+
+/* 6) If there's a sticky navbar with a bottom border (it may look like a horizontal rule),
+   you can soften it or remove it if you prefer seamless look: */
+.navbar {
+  border-bottom: 1px solid rgba(122,38,255,0.06); /* very soft */
+  /* or remove it completely: border-bottom: none; */
+}

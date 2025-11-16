@@ -1,0 +1,29 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Optional global body styling */
+body {
+  @apply bg-white text-gray-900;
+}
+
+/* Hero.css */
+
+.glass-card {
+  background: rgba(255,255,255,0.55);
+  box-shadow:
+    0 20px 40px rgba(0,0,0,0.08),
+    0 8px 20px rgba(0,0,0,0.04);
+  border: 1px solid rgba(255,255,255,0.4);
+  backdrop-filter: blur(18px);
+}
+
+@keyframes float {
+  0% { transform: translateY(0px); }
+  50% { transform: translateY(-10px); }
+  100% { transform: translateY(0px); }
+}
+
+.animate-float {
+  animation: float 6s ease-in-out infinite;
+}
