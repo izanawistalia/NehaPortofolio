@@ -25,9 +25,9 @@ const data = {
   // ========================================================
   hero: {
     title: "Hi, I’m Neha 👋",
-    subtitle: "Software Engineer • SRE • DevSecOps • Cloud Reliability",
+    subtitle: "Software Engineer • SRE • DevOps • Cloud Reliability",
     objective:
-      "I’m a Software Engineer specializing in SRE, DevSecOps, and cloud reliability—focused on building secure, resilient, and scalable distributed systems. I work across AWS, Terraform, CI/CD, and security automation to deliver systems that are engineered, not improvised.",
+      "I engineer cloud systems that are fast, secure, and impossible to break. From AWS to automation, I build infrastructure that scales without drama and performs when it matters the most..",
     ctaText: "View My Work",
     ctaLink: "#projects",
     resumeCtaText: "Download Resume",
@@ -40,11 +40,14 @@ const data = {
   // ========================================================
   about: {
     paragraphs: [
-      "I’m Neha — a Software Engineer and Site Reliability Engineer with 4+ years of experience building, securing, and scaling distributed cloud-native systems. I’m driven by engineering excellence, clean architectures, and system reliability that holds up in real-world conditions.",
+      "I’m Neha — a Software Engineer and SRE with 4+ years of experience building high-reliability, cloud-native systems.",
       
-      "My work spans across AWS infrastructure automation, Terraform-based provisioning, encryption-in-transit enforcement, vulnerability scanning pipelines, observability engineering, performance tuning, and incident response. I’ve led multiple high-impact engineering initiatives end-to-end, including enterprise-grade security tooling integrations, environment provisioning, and reliability improvements across production systems.",
+      "I thrive where performance, security, and scalability meet.",
       
-      "I love solving hard system problems, designing long-term automation, and improving the way teams ship and operate software. Whether it's optimizing CI/CD workflows, strengthening security posture, improving operational visibility, or reducing MTTR through intelligent monitoring — I aim to deliver engineering that is thoughtful, precise, and scalable."
+      "I work across AWS, Terraform, CI/CD, observability, and DevSecOps — focusing on turning complex distributed systems into clean, automated, dependable architectures. I love solving problems that most people shy away from, and I bring clarity, structure, and calm into chaotic environments.",
+      "My engineering philosophy is simple: Be precise. Be reliable. Build systems that never make you second-guess them.",
+      "I’m currently growing toward Software Architecture — designing end-to-end systems that are not just functional, but elegant and future-proof.",
+      "When I’m not optimizing something, I’m learning something new, refining my craft, and pushing myself to level up, every single day."
     ],
     signature: signatureImg,
   },
@@ -55,43 +58,29 @@ const data = {
   experience: [
     {
       company: "Replicon",
-      role: "Software Engineer I (SRE / DevSecOps)",
-      period: "2021 — Present",
+      role: "Software Engineer I (SRE / DevOps)",
+      period: "Oct 2021 — Present",
       location: "Bengaluru, India",
 
       brief:
-        "Engineering secure, reliable, and automated cloud infrastructure for a global SaaS platform.",
+        "Engineering secure, high-performance cloud infrastructure and driving reliability at scale for a global SaaS platform.",
 
       details: [
-        "Migrated intra-service communication from HTTP to HTTPS and refactored Lambda runtimes to containerized builds to enforce encryption-in-transit and compliance requirements.",
+        "Security Tooling Integration (Solo Project) : Improved vulnerability coverage by ~60% and reduced remediation turnaround by ~40%. By leading as Sole technical owner for integrating Checkmarx, KICS, CrowdStrike Falcon, and Qualys into CI/CD workflows.",
 
-        "Acted as the sole owner for integrating Checkmarx, KICS, Blackduck, CrowdStrike Falcon, and Qualys into CI/CD, improving vulnerability coverage by ~60% and reducing remediation time by ~40% :contentReference[oaicite:1]{index=1}.",
+        "Security & Compliance : Achieved enterprise-grade encryption compliance and strengthened system-wide security posture, by migrating the intra network communication from http to https and implimenting the org wide FIPS compliance.",
 
-        "Led Terraform-based provisioning of complete AWS environments (VPC, ECS, RDS, IAM, CloudWatch, S3, networking), delivering infra swimlanes ahead of schedule :contentReference[oaicite:2]{index=2}.",
+        "AWS Infrastructure Provisioning (Terraform) : Standardized infra provisioning, reduced manual errors, and accelerated environment readiness. Led Terraform-based provisioning of complete AWS environments (VPC, ECS, RDS, IAM, CloudWatch, S3, networking), delivering infra swimlanes ahead of schedule.",
 
-        "Built reusable GitHub Actions workflows for organization-wide security scanning and analysis, saving teams 1–2 days per rollout and standardizing DevSecOps practices :contentReference[oaicite:3]{index=3}.",
+        "Reusable GitHub Actions Workflows : Increased CI/CD efficiency and ensured consistent security compliance across teams. Designed and implemented org-wide reusable workflows for static analysis/security scanning.",
 
-        "Enhanced observability using Opentelemetry, Grafana, Tempo, and Sumo Logic — improving tracing detail, log signal quality, and reducing MTTR across services :contentReference[oaicite:4]{index=4}.",
+        "Monitoring & Reliability : Drove environment health monitoring project with Opentelemetry, Dynatrace, and Sumo Logic; optimized log pipelines and generated actionable insights.",
 
         "Participated in on-call rotations, performing production issue triaging, incident response, RCA, and reliability improvements.",
 
-        "Evaluated APM vendors, analyzing performance impact, integration complexity, and cost trade-offs for large-scale observability."
-      ],
-    },
+        "Evaluated APM vendors, analyzing performance impact, integration complexity, and cost trade-offs for large-scale observability.",
 
-    {
-      company: "Company XYZ",
-      role: "Backend Engineer",
-      period: "2019 — 2021",
-      location: "Remote",
-
-      brief:
-        "Developed backend systems, automation tools, and performance optimizations for internal engineering teams.",
-
-      details: [
-        "Built internal automation tools for deployments, test execution, and workflow simplification.",
-        "Optimized backend performance and database queries, reducing request latency by more than 30%.",
-        "Contributed to backend service development using Node.js and Python, maintaining clean and scalable architecture."
+        "Resolved ACL inconsistencies during client data restoration using AWS .NET SDK (C#), ensuring secure and seamless recovery.",
       ],
     },
   ],
@@ -112,38 +101,6 @@ const data = {
         "Integrated smooth animations and interactive visuals using Framer Motion.",
         "Structured content through a single modular data file for clean scalability.",
         "Deployed optimized build using CI/CD workflows and CDN distribution."
-      ],
-
-      link: "#",
-    },
-
-    {
-      title: "AWS Automation Toolkit",
-      tech: ["Python", "AWS CLI", "Bash"],
-
-      brief:
-        "A toolkit of scripts to automate common AWS operations, lifecycle workflows, and DevOps tasks.",
-
-      details: [
-        "Automated EC2 lifecycle actions including monitoring, snapshots, and cleanup tasks.",
-        "Developed IAM provisioning workflows ensuring consistent permissions and access hygiene.",
-        "Streamlined Lambda packaging and deployment flows using Python and AWS CLI."
-      ],
-
-      link: "#",
-    },
-
-    {
-      title: "Cloud Monitoring & Reliability Dashboard",
-      tech: ["Grafana", "Prometheus", "Node.js"],
-
-      brief:
-        "A real-time metrics and reliability dashboard for system health, uptime, and latency analytics.",
-
-      details: [
-        "Configured Prometheus metric collection across distributed services.",
-        "Designed Grafana dashboards and alerting for actionable insights.",
-        "Built Node.js collectors to aggregate and expose custom application metrics."
       ],
 
       link: "#",
@@ -196,11 +153,10 @@ const data = {
   // CONTACT
   // ========================================================
   contact: {
-    email: "your-email@gmail.com",
+    email: "nehabn09@gmail.com",
     socials: [
-      { name: "LinkedIn", url: "#" },
-      { name: "GitHub", url: "#" },
-      { name: "Twitter", url: "#" },
+      { name: "LinkedIn", url: "https://www.linkedin.com/in/neha-belwal-0886a318b" },
+      { name: "GitHub", url: "https://github.com/izanawistalia" },
     ],
   },
 
